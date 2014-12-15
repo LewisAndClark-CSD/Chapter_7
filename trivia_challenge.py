@@ -20,6 +20,8 @@ def next_line(the_file):
     line = line.replace("/", "\n")
     return line
 
+
+
 def next_block(the_file):
     """Return the next block of data from the trivia file."""
     category = next_line(the_file)
@@ -64,7 +66,7 @@ def main():
         # check answer
         if answer == correct:
             print("\nRight!", end=" ")
-            score += 1
+            score += int(answer)
         else:
             print("\nWrong.", end=" ")
         print(explanation)
