@@ -1,0 +1,46 @@
+Wecome to Fun with Python Files and Execptions!
+Files 
+How do you open a file?
+open(name, fileType, mode)
+file.open()
+open(name, mode)
+open(type(name, mode)
+3
+1
+You open a file by open(name, mode)
+Files
+How do you close a file?
+close(file)
+file.close()
+close(file, mode)
+close(file, fileType, mode)
+2
+2
+You close a file by file.close()
+File Modes
+Which of these modes read from and write to a text file?
+r
+w+
+w
+r+
+4
+3
+You read from and write to a text file by using the r+ mode.
+Binary Modes
+Which of these mode append and read from a binary file?
+rb
+ab
+wb+
+ab+
+4
+4
+You append and read from a binary file by using ab+.
+Pickle Files
+How do you save data to a pickle file file?
+pickle.append(object)
+pickle.append(object, file)
+pickle.dump(object, file)
+pickle.dump(object, mode, file)
+3
+5
+You save objects to pickle files by using pickle.dump(object, file).
