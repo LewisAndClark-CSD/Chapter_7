@@ -1,5 +1,11 @@
-# Trivia Challenge
-# Trivia game that reads a plain text file
+"""
+1. Improve the Trivia Challenge game so that each question has a unique point value
+   associated with it. The player’s score should be the total of all the point values
+   of the questions he or she answers correctly.
+"""
+#Challenge 1 (Edited Copy of 'trivia_challenge.py')
+#Andrew Hecky
+#12/9/1
 
 import sys
 
@@ -85,3 +91,4 @@ def main():
  
 main()  
 input("\n\nPress the enter key to exit.")
+
