@@ -1,0 +1,41 @@
+Python Fun :D
+Text Files
+How does one open a text file?
+text.file = open('filename', 'mode')
+One does not simply open a text file!!!
+text.file(open(filename, mode)
+text.file open('filename', 'mode')
+1
+Look it up, that's how you open a text file
+Closing Text Files
+How does one close a text file?
+text.fileclose
+text file(close)
+One does not simply close a text file!!!
+text.file.close()
+4
+Look that up, I dare you!
+Modes
+Which of the following are acceptable modes when opening a text file?
+r, w, a, wasd
+r+, w+, a
+b, c, d
+What?
+2
+r+, w+, and a are all modes
+The 'r' Mode
+Which of the following is true about the 'r' mode?
+Creates a new file if there isn't one there
+Allows writability to the text file
+Has a fit if the file isn't there
+Can both read and write to a file
+3
+Python shows an error is the file isn't there or doesn't exist.
+The 'a+' Mode
+Which is not true about the 'a+' mode?
+Can both write and read a text file
+Throws an error your way if the file does exist
+Creates a new file if none exists
+Is the best mode for every job
+4
+No mode is perfect for every job silly
