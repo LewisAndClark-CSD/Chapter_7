@@ -1,0 +1,37 @@
+Python Trivia Extravaganza!!!
+Gotta Use Pickles
+What is a pickle in python?
+A disgusting piece of garbage food
+A vegetable
+A way to store data in binary
+A way to store data in hexdecimal
+3
+When pickling, it stores the data in binary
+2
+Python Structure
+Which of the following sequences would actually work?
+open in 'r' mode-->read+save data locally-->'change data'-->write data back
+open in 'w' mode-->read+save data locally-->'change data'-->write data back
+open in 'r' mode-->read+save data locally-->close file-->'change data'-->open in 'w' mode-->write data back
+open in 'a' mode-->read+save data locally-->'change data'-->write data back
+3
+To read from a file you cannot use 'w', you can use 'r' however, but cannot write when using 'r'
+3
+Programmer Knowledge
+Out of the following, which is the best sequence to go about a code problem in class?
+Mr. Schmit-->Year 2 Student--> Smart Year 1 Student-->Neighbor-->Google
+Neighbor-->Smart Year 1 Student-->Year 2 Student-->Google-->Mr. Schmit
+A dog-->Skeletor-->He-Man-->A bar of soap-->Bing
+Google-->Mr. Schmit
+2
+You only ask Mr. Schmit after all resources have been tried and unsuccessful, knowing this, the rest is common sense
+3
+INPUT TITLE
+Which of the following is the correct best use of input(assuming the user always enters a number)?
+input "Enter number: "; number
+number = input "Enter number: "
+number = input("Enter number: ")
+number = int(input("Enter number: "))
+4
+While number 3 could work, number 4 is more efficient with the given situation
+4
