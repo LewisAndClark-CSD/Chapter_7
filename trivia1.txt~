@@ -1,0 +1,43 @@
+ 
+ 
+Why would you want to append data to a file?
+In order to save it correctly
+To retrieve the information later
+For insurance against a file corruption
+Files are cooler than programs
+2
+5
+ 
+What mode would you use if you wanted to (only) write to a text file?
+
+"r"
+"w+"
+"a"
+"w"
+4
+4
+ 
+What mode would you use if you wanted to create a new file for reading or writing?
+"c"
+"n"
+"r"
+"w"
+1
+3
+ 
+What is a good way to store structured information?
+Pickling
+Potatoing
+Artichoking
+Murdering
+1
+28
+ 
+What exception type is raised when a built-in operation or function recieves an argument that has the right type but an innapropriote value?
+IOError
+NameError
+ValueError
+SyntaxError
+3
+6
+ 
