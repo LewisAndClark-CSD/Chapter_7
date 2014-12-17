@@ -1,0 +1,46 @@
+Python Episode #1
+What if you did that while for the loop!
+What is python named after?
+A snake.
+A python snake.
+A Monty Python.
+I do not know,
+3
+10
+Python is a snake, lol but the movie is better.
+How many loops does it take to get to the center of a function?
+What breaks a loop?
+'jump'
+'break'
+'exit'
+'leave'
+2
+15
+The command 'break' breaks a loop.
+This is a category! Not a list.
+Could you append this [([([([([([])])])])])]?
+Yes
+No
+Maybe
+I have no idea I don't even know what python is.
+1
+20
+Yes you can, Im pretty sure its a list I just typed a bunch of random brackets and paranthesis.
+What is, a function?
+What is the most conventional way of making a countdown?
+For loop
+While loop
+Both
+Neither, I know what's best for my life.
+1
+25
+A for loop, only because I hate them.
+Who do you think I am, some sort of tuple?
+Can you append tuple's?
+Yes
+No
+Maybe
+Depends on the age of the stars.
+1
+30
+Yes, you can append to tuples you donut.
