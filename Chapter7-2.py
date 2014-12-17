@@ -1,4 +1,9 @@
+#Chapter7-2.py
+#Karl Pearson
+#12/17/2014
+
 import sys
+import pickle
 
 def open_file(file_name, mode):
     """Open a file."""
@@ -40,9 +45,23 @@ def welcome(title):
     """Welcome the player and get his/her name."""
     print("\t\tWelcome to Trivia Challenge!\n")
     print("\t\t", title, "\n")
- 
+
+def highScores(score):
+    try:
+            pickleFile=open("Challenge7-2.dat","rb")
+            highScores=pickle.load(pickleFile)
+            pickleFile.close()
+    except:
+        highScores=[]
+    a=input("Enter name: ")
+    highscore=(a, score)
+    highScores.append(highscore)
+    pickleFile=open("Challenge7-2.dat","wb")
+    pickle.dump(highScores, pickleFile)
+    pickleFile.close()
+    
 def main():
-    trivia_file = open_file("trivia.txt", "r")
+    trivia_file = open_file("challenge7-1.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
@@ -62,7 +81,7 @@ def main():
         # check answer
         if answer == correct:
             print("\nRight!", end=" ")
-            score = score + int(points)
+            score = score +int(points)
         else:
             print("\nWrong.", end=" ")
         print(explanation)
@@ -75,6 +94,6 @@ def main():
 
     print("That was the last question!")
     print("You're final score is", score)
- 
-main()  
+    highScores(score)
+main()
 input("\n\nPress the enter key to exit.")
