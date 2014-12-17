@@ -1,0 +1,46 @@
+A strong grip!
+How to file
+How do you open files?
+open(name, mode)
+file.open()
+open(name, fileType, mode)
+open(type(name, mode)
+1
+3
+What is python?
+Watchout for that python
+What is it ?
+A snake
+A coding language
+A Bigger Snake
+A cheez burger
+3
+8
+You pick
+Be carefull
+Who is cool?
+Me?
+You? 
+Thorin?
+A pet dragon named Snoffelz
+2
+9
+close
+How do you close a file?
+closeing the deal
+File name()
+File.close()
+File i made you now shut down
+File()
+1
+3
+What would you rather lern
+One is fun the other is a crusty bunn
+What is better to lern/easy?
+Python
+C++
+C#
+Cobol
+4
+5
+According to my kool o meter you did mea~
