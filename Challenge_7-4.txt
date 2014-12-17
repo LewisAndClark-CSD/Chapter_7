@@ -1,0 +1,47 @@
+An Episode You Can't Refuse
+Python Question #1:
+What does the following code do?
+def a(b, c, d): pass
+A.) defines a list and initializes it.
+B.) defines a function, which does nothing
+C.) defines a function, which passes its parameters through
+D.) defines an empty class
+1
+132
+Answer: Defines a function, which does nothing.
+What gets printed? Assuming python version 2.x
+A.)<type 'int'>
+B.)<type 'number'>
+C.)<type 'float'>
+D.)<type 'double'>
+Answer: <type int>
+3
+87
+What gets printed?
+def f(): pass
+print type(f())
+A.)<type 'function'>
+B.)<type 'tuple'>
+C.)<type 'NoneType'>
+D.)<type 'str'>
+Answer: <type 'NoneType'>
+2
+2
+What is the output for the following code?
+print type (lambda:None)
+A.)<type 'NoneType'>
+B.)<type 'function'>
+C.)<type 'tuple'>
+D.)<type 'type'>
+Answer: <type 'type'>
+1
+8
+What is the output of the program below?
+a = [1,2,3,None,(),[],]
+print len(a)
+A.)syntax error
+B.)4
+C.)5
+D.)6
+4
+98

@@ -1,5 +1,6 @@
-# Trivia Challenge
-# Trivia game that reads a plain text file
+#Challenge_7-1
+#Joe Carty
+#12/17/14
 
 import sys
 
@@ -65,7 +66,7 @@ def main():
         # check answer
         if answer == correct:
             print("\nRight!", end=" ")
-            score += int(point)
+            score += point
         else:
             print("\nWrong.", end=" ")
         print(explanation)
