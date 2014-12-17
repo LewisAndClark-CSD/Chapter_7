@@ -1,7 +1,7 @@
 # Trivia Challenge
 # Trivia game that reads a plain text file
 
-import sys
+import sys, pickle, shelve
 
 def open_file(file_name, mode):
     """Open a file."""
@@ -46,11 +46,11 @@ def welcome(title):
     print("\t\t", title, "\n")
  
 def main():
+    global score
     trivia_file = open_file("trivia.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
-
     # get first block
     category, question, answers, correct, addScore, explanation = next_block(trivia_file)
     while category:
@@ -80,6 +80,55 @@ def main():
 
     print("That was the last question!")
     print("You're final score is", score)
- 
-main()  
+    
+main()
+
+name = input('Enter your name and see if you make the highscore list: ')
+HIGHSCORE = (name, int(score))
+
+try:
+    lscores = open('challenge3.txt', 'r')
+except:
+    print('No highscores found! Creating one')
+highscores = []
+while True:
+    try:
+        scores = lscores.readline()
+        if scores == '':
+            break
+        scores = scores.strip()
+        scoreslist = scores.split(',')
+        scoresname = scoreslist[0]
+        scores2 = int(scoreslist[1])
+        scoreslist = (scoresname, int(scores2))
+        highscores.append(scoreslist)
+    except IOError:
+        print('You hit the except.')
+
+highscores.append(HIGHSCORE)
+
+highscores = sorted(highscores, key=lambda tup: tup[1], reverse=True)
+
+theRealScores = highscores
+
+theRealScores = sorted(theRealScores, key=lambda tup: tup[1], reverse=True)
+
+if len(theRealScores) > 5:
+    theRealScores.pop()
+    
+print('\nThe Highscores are: ')
+print()
+for i in range(len(theRealScores)):
+    print(theRealScores[i][0], '-' , theRealScores[i][1])
+
+lscores.close()
+lscores = open('challenge3.txt', 'w')
+
+for i in theRealScores:
+    writename = str(i[0])
+    writescore = str(i[1])
+    writeline = (writename+','+writescore+'\n')
+    lscores.write(writeline)
+lscores.close()
+
 input("\n\nPress the enter key to exit.")
