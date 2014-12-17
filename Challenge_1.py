@@ -1,7 +1,7 @@
 # Trivia Challenge
 # Trivia game that reads a plain text file
 
-import sys
+import sys, pickle, shelve
 
 def open_file(file_name, mode):
     """Open a file."""
@@ -50,7 +50,6 @@ def main():
     title = next_line(trivia_file)
     welcome(title)
     score = 0
-
     # get first block
     category, question, answers, correct, addScore, explanation = next_block(trivia_file)
     while category:
@@ -80,6 +79,7 @@ def main():
 
     print("That was the last question!")
     print("You're final score is", score)
- 
-main()  
+    
+main()
+
 input("\n\nPress the enter key to exit.")
