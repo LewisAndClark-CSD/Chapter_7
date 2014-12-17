@@ -1,7 +1,8 @@
-# Trivia Challenge
-# Trivia game that reads a plain text file
+#Chapter_7-2.py
+#Joe Carty
+#12/17/14
 
-import sys
+import sys,pickle
 
 def open_file(file_name, mode):
     """Open a file."""
@@ -44,6 +45,20 @@ def welcome(title):
     print("\t\tWelcome to Trivia Challenge!\n")
     print("\t\t", title, "\n")
  
+def highScores(score):
+    try:
+            picke_file=open("Challenge_7-2.dat","rb")
+            highScore=pickle.load(pickleFile)
+            pickleFile.close()
+    except:
+        highScores=[]
+    a=input("Enter a name: ")
+    highScore=(a, score)
+    highScores.append(highScore)
+    pickleFile=open("Challenge_7-2.dat","wb")
+    pickle.dump(highScores, pickleFile)
+    pickleFile.close()
+    
 def main():
     trivia_file = open_file("Challenge_7-1.txt", "r")
     title = next_line(trivia_file)
@@ -78,6 +93,7 @@ def main():
 
     print("That was the last question!")
     print("You're final score is", score)
- 
-main()  
+    highScores(score)
+main()
 input("\n\nPress the enter key to exit.")
+ 

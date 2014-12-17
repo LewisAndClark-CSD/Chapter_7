@@ -1,5 +1,6 @@
-# Trivia Challenge
-# Trivia game that reads a plain text file
+#Challenge_7-4.py
+#Joe Carty
+#12/17/14
 
 import sys
 
@@ -45,7 +46,7 @@ def welcome(title):
     print("\t\t", title, "\n")
  
 def main():
-    trivia_file = open_file("Challenge_7-1.txt", "r")
+    trivia_file = open_file("Challenge_7-4.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0

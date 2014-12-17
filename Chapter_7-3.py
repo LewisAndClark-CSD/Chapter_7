@@ -1,7 +1,9 @@
-# Trivia Challenge
-# Trivia game that reads a plain text file
+#Chapter7-3.py
+#Joe Carty
+#12/17/14
 
 import sys
+import pickle
 
 def open_file(file_name, mode):
     """Open a file."""
@@ -33,25 +35,32 @@ def next_block(the_file):
     correct = next_line(the_file)
     if correct:
         correct = correct[0]
-    point=next_line(the_file)
+    points=next_line(the_file)
         
     explanation = next_line(the_file) 
 
-    return category, question, answers, correct, point, explanation
+    return category, question, answers, correct, points, explanation
 
 def welcome(title):
     """Welcome the player and get his/her name."""
     print("\t\tWelcome to Trivia Challenge!\n")
     print("\t\t", title, "\n")
- 
+
+def highScores(score):
+    a=input("Enter name: ")
+    highScores=(a, str(score))
+    file=open("Challenge7-3.txt","a")
+    file.writelines(highScores)
+    file.close()
+    
 def main():
-    trivia_file = open_file("Challenge_7-1.txt", "r")
+    trivia_file = open_file("Chapter7-1.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
 
     # get first block
-    category, question, answers, correct, point, explanation = next_block(trivia_file)
+    category, question, answers, correct, points, explanation = next_block(trivia_file)
     while category:
         # ask a question
         print(category)
@@ -65,19 +74,20 @@ def main():
         # check answer
         if answer == correct:
             print("\nRight!", end=" ")
-            score += int(point)
+            score=score+int(points)
         else:
             print("\nWrong.", end=" ")
         print(explanation)
         print("Score:", score, "\n\n")
 
         # get next block
-        category, question, answers, correct, point, explanation = next_block(trivia_file)
+        category, question, answers, correct, points, explanation = next_block(trivia_file)
 
     trivia_file.close()
 
     print("That was the last question!")
     print("You're final score is", score)
+    highScores(score)
  
-main()  
+main()
 input("\n\nPress the enter key to exit.")
