@@ -1,5 +1,6 @@
-# Trivia Challenge
-# Trivia game that reads a plain text file
+#Chapter7-1.py
+#By: Karlos Calvillo
+#12/15/14
 
 import sys
 
@@ -45,7 +46,7 @@ def welcome(title):
     print("\t\t", title, "\n")
  
 def main():
-    trivia_file = open_file("trivia.txt", "r")
+    trivia_file = open_file("Chapter7-4trivia.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
@@ -72,7 +73,7 @@ def main():
         print("Score:", score, "\n\n")
 
         # get next block
-        category, question, answers, correct, explanation = next_block(trivia_file)
+        category, question, answers, correct, points, explanation = next_block(trivia_file)
 
     trivia_file.close()
 
