@@ -1,0 +1,46 @@
+Wecome to Python Files and Execptions.
+What is this? 
+What is python?
+A song
+An animal
+A programing language
+I don't know
+3
+5
+In this class its a programing language.
+Functiond
+How do you use numbers in a string?
+range
+int
+input
+number
+2
+3
+You use the int function to use numbers. 
+Loops
+A loop that repeats part of a program based on the sequence?
+while
+repeat
+re
+for
+4
+2
+A for loop is right
+Execptions
+When you can't figure out something what do you do first?
+Ask Teacher
+Ask a friend
+Ask Pope Tom The Third
+Look in the book or internet
+4
+4
+Yes! You look in the book or the internet before anything else.
+Pickle Files
+How do you save data to a pickle file file?
+pickle.append(object)
+pickle.append(object, file)
+pickle.dump(object, file)
+pickle.dump(object, mode, file)
+3
+6
+You save objects to pickle files by using pickle.dump(object, file).
