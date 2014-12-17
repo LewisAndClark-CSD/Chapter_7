@@ -7,9 +7,6 @@
 #Andrew Hecky
 #12/9/2014
 
-# Trivia Challenge
-# Trivia game that reads a plain text file
-
 import sys, pickle
 
 def open_file(file_name, mode):
@@ -96,42 +93,47 @@ def main():
     print("That was the last question!")
     print("You're final score is", score)
 
+def highscores(score):
+    ###HIGHSCORES###
+    addscore = True
+    username = ""
+    try:
+        highscores = pickle.load(open('highscores2.txt', 'rb')) #Loading
+    except EOFError:
+        highscores = []
+    highscores = sorted(highscores, key=lambda tup: tup[1], reverse=True) #Sorting
+    try: #Checking to see if made highscore list
+        for i in highscores:
+            if score > i[1]:
+                addscore = True
+            else:
+                addscore = False
+    except UnboundLocalError:
+        addscore = True
+    if len(highscores) < 5: #Adding score if max score isnt reached
+        addscore = True
+    if addscore == True: #If made new highscore
+        print("\nYou've set a new highscore! ")
+        while username == "":
+            username = input("Enter Your Name: ") #Getting username
+        add = (username, int(score)) #Making tuple (User Name, User Score)
+        highscores.append(add) #Adding Tuple to highscore list
+        highscores = sorted(highscores, key=lambda tup: tup[1], reverse=True) #Sortign again
+        if len(highscores) > 5: #Deleting score if list limit (5) is reached
+            highscores.pop(5) 
+        print("\n    HIGHSCORES:") #printing highscores
+        num1 = 0
+    for i in highscores:
+        num1 += 1
+        num = i[1]
+        print("\t" + str(num1) + ") " + i[0] + ': ' + str(num))
+    pickle.dump(highscores,open('highscores2.txt','wb')) #Saving highscores=
+    ###END HIGHSCORES###
+
+
+
     
  
 main()
-addscore = True
-username = ""
-    ###HIGHSCORES###
-try:
-    highscores = pickle.load(open('highscores.txt', 'rb')) #Loading
-except EOFError:
-    highscores = []
-highscores = sorted(highscores, key=lambda tup: tup[1], reverse=True)
-try:
-    for i in highscores:
-        if score > i[1]:
-            addscore = True
-        else:
-            addscore = False
-except UnboundLocalError:
-    addscore = True
-if len(highscores) < 5:
-    addscore = True
-if addscore == True:
-    print("\nYou've set a new highscore! ")
-    while username == "":
-        username = input("Enter Your Name: ")
-    add = (username, int(score))
-    highscores.append(add)
-    highscores = sorted(highscores, key=lambda tup: tup[1], reverse=True)
-    if len(highscores) > 5:
-        highscores.pop(5)
-    print("\n    HIGHSCORES:")
-    num1 = 0
-for i in highscores:
-    num1 += 1
-    num = i[1]
-    print("\t" + str(num1) + ") " + i[0] + ': ' + str(num))
-pickle.dump(highscores,open('highscores.txt','wb'))
-
+highscores(score)
 input("\n\nPress the enter key to exit.")
