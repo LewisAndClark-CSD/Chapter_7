@@ -1,0 +1,45 @@
+Python Question 1
+How do you write things to a file?
+file.write(stuff)
+write.file(stuff)
+file.stuff(write)
+Ask Tom to do it
+1
+1
+file.write(stuff)
+Python Question 2
+What does the pickle command do?
+Gives you a free pickle
+Encoding a file
+Object serialization
+Moves a file
+3
+2
+Object serialization
+Python Question 3
+How do you open a text file for reading in lines?
+file=file.tx","r"(open)
+file=open("file.txt","r")
+file=opensesame.txt
+file=open("r,"file.txt")
+2
+3
+file=open("file.txt","r")
+Python Question 4
+How do you open a text file for writing in lines?
+file=open("file.txt","w"
+write.open(file.txt)
+opennowplease.txt
+open.write(file.txt)
+1
+4
+file=open("file.txt","w"
+Python Question 5
+How do you close a file in python?
+close(file.txt)
+close.file(file.txt)
+file.close
+file.close()
+4
+5
+file.close()
