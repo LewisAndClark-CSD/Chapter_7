@@ -1,7 +1,7 @@
-# Trivia Challenge
-# Trivia game that reads a plain text file
+#Challenge 3
+#Jose Chica
 
-import sys
+import sys, pickle, shelve
 
 def open_file(file_name, mode):
     """Open a file."""
@@ -43,26 +43,50 @@ def welcome(title):
     """Welcome the player and get his/her name."""
     print("\t\tWelcome to Trivia Challenge!\n")
     print("\t\t", title, "\n")
- 
+
+def high_scores(Score):
+    try:
+        PickleFile=open("Challenge1.dat","rb")
+        highScores=pickle.load(PickleFile)
+        PickleFile.close()
+    except:
+        highScores=[]
+    GreatJob=0
+    if len(highScores) > 0:
+        for HighScore in highScores:
+            if HighScore < Score:
+                GreatJob +=1
+    else:
+        GreatJob +=1
+        
+    if GreatJob != 0:
+        print("Great job! You got made a new high score!")
+        Name=input("Name: ")
+        NewHighScore=(Name, Score)
+        highScores.append(NewHighScore)
+    PickleFile=open("Challenge1.dat","wb")
+    pickle.dump(highScores,PickleFile)
+    PickleFile.close()
+
 def main():
     trivia_file = open_file("Challenge1.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
 
-    # get first block
+    
     category, question, answers, correct, pointvalue, explanation = next_block(trivia_file)
     while category:
-        # ask a question
+        
         print(category)
         print(question)
         for i in range(4):
             print("\t", i + 1, "-", answers[i])
 
-        # get answer
+        
         answer = input("What's your answer?: ")
 
-        # check answer
+       
         if answer == correct:
             print("\nRight!", end=" ")
             score += int(pointvalue)
@@ -71,13 +95,14 @@ def main():
         print(explanation)
         print("Score:", score, "\n\n")
 
-        # get next block
+        
         category, question, answers, correct, pointvalue, explanation = next_block(trivia_file)
 
     trivia_file.close()
 
     print("That was the last question!")
     print("You're final score is", score)
+    high_score(score)
  
 main()  
 input("\n\nPress the enter key to exit.")

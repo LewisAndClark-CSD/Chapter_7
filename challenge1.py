@@ -1,5 +1,5 @@
-# Trivia Challenge
-# Trivia game that reads a plain text file
+#Challenge 1
+#Jose Chica
 
 import sys
 
@@ -43,26 +43,26 @@ def welcome(title):
     """Welcome the player and get his/her name."""
     print("\t\tWelcome to Trivia Challenge!\n")
     print("\t\t", title, "\n")
- 
+
 def main():
     trivia_file = open_file("Challenge1.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
 
-    # get first block
+    
     category, question, answers, correct, pointvalue, explanation = next_block(trivia_file)
     while category:
-        # ask a question
+        
         print(category)
         print(question)
         for i in range(4):
             print("\t", i + 1, "-", answers[i])
 
-        # get answer
+        
         answer = input("What's your answer?: ")
 
-        # check answer
+       
         if answer == correct:
             print("\nRight!", end=" ")
             score += int(pointvalue)
@@ -71,7 +71,7 @@ def main():
         print(explanation)
         print("Score:", score, "\n\n")
 
-        # get next block
+        
         category, question, answers, correct, pointvalue, explanation = next_block(trivia_file)
 
     trivia_file.close()
