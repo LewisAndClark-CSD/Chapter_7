@@ -1,3 +1,7 @@
+#Chapter7-1.py
+#Karl Pearson
+#12/15/2014
+
 import sys
 
 def open_file(file_name, mode):
@@ -42,7 +46,7 @@ def welcome(title):
     print("\t\t", title, "\n")
  
 def main():
-    trivia_file = open_file("trivia.txt", "r")
+    trivia_file = open_file("7-4Trivia.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
@@ -62,7 +66,7 @@ def main():
         # check answer
         if answer == correct:
             print("\nRight!", end=" ")
-            score = score + int(points)
+            score = score +int(points)
         else:
             print("\nWrong.", end=" ")
         print(explanation)
